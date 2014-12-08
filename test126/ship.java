@@ -6,12 +6,19 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class ship1 extends Actor
+public class ship extends Actor
 {
    private int spawnCounter;
    private boolean selected = false; 
-   private boolean goDown = true;
-   
+   private boolean goDown = true;   
+
+   public int getRandomNumber(int start,int end)  
+{  
+       int normal = Greenfoot.getRandomNumber(end-start+1);  
+       return normal+start;  
+} 
+       
+
 public boolean atWorldEdge()  
     {   
         if(getY() > getWorld().getHeight() - 10)  
@@ -52,7 +59,7 @@ public boolean atWorldEdge()
        goDown = false;
    }
 
-   Actor a = this.getOneIntersectingObject(ship1.class); 
+   Actor a = this.getOneIntersectingObject(ship.class); 
    if ( a != null)
    {
        this.getWorld().removeObject( a );

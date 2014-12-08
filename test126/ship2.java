@@ -8,7 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class ship2 extends Actor
 {
-     private int spawnCounter;
+   private int spawnCounter;
    private boolean selected = false; 
    private boolean goDown = true;
    
