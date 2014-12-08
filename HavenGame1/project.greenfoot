@@ -1,4 +1,6 @@
 #Greenfoot properties
-#Mon Dec 08 21:55:10 CET 2014
-project.charset=UTF-8
+#Mon Dec 08 21:57:05 CET 2014
+class.Water.superclass=greenfoot.World
 version=2.6.0
+project.charset=UTF-8
+class.Water.image=WaterAgeDeep.png
