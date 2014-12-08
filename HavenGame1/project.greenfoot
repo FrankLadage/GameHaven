@@ -1,6 +1,7 @@
-#Greenfoot project file
-class.Water.image=WaterAgeDeep.png
+#Greenfoot properties
+#Mon Dec 08 21:57:05 CET 2014
 class.Water.superclass=greenfoot.World
+<<<<<<< HEAD
 <<<<<<< HEAD
 mainWindow.height=521
 mainWindow.width=1135
@@ -38,3 +39,8 @@ version=2.6.0
 =======
 world.lastInstantiated=Water
 >>>>>>> origin/master
+=======
+version=2.6.0
+project.charset=UTF-8
+class.Water.image=WaterAgeDeep.png
+>>>>>>> ba84105b7585afc8e92c449ba015aa7773c78b1c
