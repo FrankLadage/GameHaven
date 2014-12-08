@@ -14,21 +14,21 @@ public class bg extends World
     
     public void act()     
     {    
-    // spawn ships random
+      // spawn ships random
         if(Greenfoot.getRandomNumber(10000) < 10) {    
-            addObject(new ship1(), Greenfoot.getRandomNumber(1000),0);  
+            addObject(new ship1(), Greenfoot.getRandomNumber(900),10);  
         }   
         
         if(Greenfoot.getRandomNumber(10000) < 10) {    
-            addObject(new ship2(), Greenfoot.getRandomNumber(1000),0);     
+            addObject(new ship2(), Greenfoot.getRandomNumber(900),10);     
         } 
         
         if(Greenfoot.getRandomNumber(10000) < 10) {    
-            addObject(new ship3(), Greenfoot.getRandomNumber(1000),0);     
+            addObject(new ship3(), Greenfoot.getRandomNumber(900),10);     
         } 
         
         if(Greenfoot.getRandomNumber(10000) < 10) {    
-            addObject(new ship4(), Greenfoot.getRandomNumber(1000),0);     
+            addObject(new ship4(), Greenfoot.getRandomNumber(900),10);     
         } 
     }
    

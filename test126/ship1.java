@@ -8,54 +8,55 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class ship1 extends Actor
 {
-   private int spawnCounter;
-   private boolean selected = false; 
-   private boolean goDown = true;
+  private int spawnCounter;
+  private boolean selected = false; 
+  private boolean goDown = true;
    
-public boolean atWorldEdge()  
-    {   
-        if(getY() > getWorld().getHeight() - 10)  
-            return true;  
-        else  
-            return false;  
-    }    
-    
-   public void act()  
-   {  
+   
+  public boolean atWorldEdge()  
+  {  
+    if(getY() > getWorld().getHeight() - 10)
+        return true;  
+    else  
+        return false;  
+  }    
+  
+  public void act()  
+  {  
     int x = getX();
     int y = getY();
 
-   if (goDown){
+    if (goDown)
+    {
         setLocation(getX(), getY()+1);  
-   }
-   else{
+    }
+    else{
         setRotation(180);
         setLocation(getX(), getY()-1);
-   }
+    }
 
-   if (Greenfoot.mouseClicked(this)) {
-       selected = true;
-   }
+    if (Greenfoot.mouseClicked(this)) 
+    {
+        selected = true;
+    }
 
-   if (Greenfoot.mouseClicked(null) && !Greenfoot.mouseClicked(this)) selected = false;
+    if (Greenfoot.mouseClicked(null) && !Greenfoot.mouseClicked(this)) selected = false;
 
-   if (selected && Greenfoot.isKeyDown("left")){
-    setLocation(getX()-1, getY());
-   }
+    if (selected && Greenfoot.isKeyDown("left"))
+    {
+        setLocation(getX()-1, getY());
+    }
+   
+    if (selected && Greenfoot.isKeyDown("right"))
+    {
+        setLocation(getX()+1, getY());
+    }
+   
+    if(atWorldEdge()) 
+    {
+        goDown = false;
+    }
     
-   if (selected && Greenfoot.isKeyDown("right")){
-       setLocation(getX()+1, getY());
-   }
-    
-   if(atWorldEdge()) 
-   {
-       goDown = false;
-   }
-
-   Actor a = this.getOneIntersectingObject(ship1.class); 
-   if ( a != null)
-   {
-       this.getWorld().removeObject( a );
-   }
-}
+    if (getY() == 1) getWorld().removeObject(this); 
+  }
 }
